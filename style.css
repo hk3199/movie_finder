@@ -1,0 +1,89 @@
+body {
+  font-family: 'Lora', serif;
+  background: linear-gradient(45deg,rgba(0,0,0,0.9), rgba(116,6,10,0.9));
+  height:100vh;
+}
+
+#search{
+	max-width: 500px;
+}
+
+#bttn{
+	color:#fff;
+	background:linear-gradient( 180deg, rgba(0,0,0,1), rgba(128, 128, 128,1));
+	background-color: black;
+	border-radius: 5px;
+
+}
+
+#names{
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+	flex-direction: row;
+  justify-content: center;
+  
+}
+
+
+.container h1{
+	box-sizing: border-box;
+	border-radius: 5px;
+	background:linear-gradient( 180deg, rgba(0,0,0,1), rgba(128, 128, 128,1));
+	color: #fff;
+	padding: 10px;
+	margin-top: 5px;
+
+}
+
+.container-2{
+	display: flex;
+	justify-content: space-between;
+}
+
+.container-2-box1{
+	
+	padding:10px;
+	flex: 1;
+	margin-left: 10px;
+	cursor: pointer;
+	
+}
+
+
+.container-2-box2{
+flex: 2;
+color: #fff;
+border-radius: 5px;
+background:linear-gradient( 180deg, rgba(116,6,10,0.9),rgba(128, 128, 128,1) );
+
+margin: 40px;
+}
+
+
+
+.poster{
+	 
+	padding-top: 30px;
+	border-top-left-radius:  10px;
+	border-top-right-radius:  10px;
+	padding: 30px;
+	cursor: pointer;
+	}
+
+
+#output{
+	color: white;
+	font-size: 150%;
+	font-weight: 500;
+	
+	text-align: center;
+	box-sizing: border-box;
+	background:linear-gradient( 180deg, rgba(0,0,0,1), rgba(128, 128, 128,1));
+	font-style: italic;
+	border-bottom-left-radius:  10px;
+	border-bottom-right-radius:  10px;
+	margin:40px;
+	
+
+}
