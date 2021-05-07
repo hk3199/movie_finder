@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	 <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+ 
+<link rel="stylesheet" type="text/css" href="style.css">
+
+	<title>Movie-Finder</title>
+</head>
+<body>
+     <div class="container">
+             <h1 class="text-center">Movie info app</h1>
+            
+           </div>
+             
+    <div  class="container">
+     	<div id="names" class="row" >
+            
+                <input type="text" class="form-control" id="search" placeholder="Enter name of Movie...">
+                <button class="btn btn-secondary" id="bttn" onclick="update()" >Search</button>
+     	  
+        </div>
+    </div>
+        <div class="container-2">
+                
+                <div class="container-2-box1"> 
+                        <img src="" class="poster"> 
+                </div>
+                
+                <div class="container-2-box2">
+                        <p id="output"></p>
+                        <div class="year">  </div>
+
+                        <div class="rating"></div>
+                        <div class="timing"></div>
+                        <div class="genre"></div>
+                        <div class="description"></div>
+                        <div class="director"></div>
+                        <div class="starring"></div>
+                        <div class="imdb"></div>
+                        <div class="votes"></div>
+                 </div> 
+
+            </div> 
+        
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script src="main.js"></script> 
+</body>
+</html>
