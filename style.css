@@ -56,8 +56,10 @@ flex: 2;
 color: #fff;
 border-radius: 5px;
 background:linear-gradient( 180deg, rgba(116,6,10,0.9),rgba(128, 128, 128,1) );
-
+align-items: center;
+text-align: center;
 margin: 40px;
+
 }
 
 
