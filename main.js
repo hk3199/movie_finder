@@ -5,7 +5,7 @@
 function update(){
 	search =document.querySelector('.form-control').value;
 	httpRequest= new XMLHttpRequest();
-	url='http://www.omdbapi.com/?i=tt3896198&apikey=5da20094&t='+search+'/';
+	url='https://www.omdbapi.com/?i=tt3896198&apikey=5da20094&t='+search+'/';
 	httpRequest.open("GET",url);
 	 
 	console.log(httpRequest);
