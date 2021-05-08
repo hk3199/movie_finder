@@ -13,7 +13,11 @@ function update(){
 
    //parameter names
    let director="Director: ";
-
+   let runtime="Runtime: ";
+   let sterring="Starring: ";
+   let plot="Plot: ";
+   let imdn="Imdb: ";
+   let genre="Genre: ";
 	httpRequest.onreadystatechange= function(){
 		if(this.readyState==4 && this.status==200){
 			user_data=JSON.parse(this.responseText);
@@ -23,17 +27,25 @@ function update(){
 			document.querySelector('.rating').innerHTML=user_data.Rated;
 			document.querySelector('.timing').innerHTML=user_data.Runtime;
 			document.querySelector('.poster').src=user_data.Poster;
-			document.querySelector('.director').innerHTML=user_data.Director;
-			document.querySelector('.starring').innerHTML=("Actors: ")+user_data.Actors;
-			document.querySelector('.genre').innerHTML=("Genre: ")+user_data.Genre;
-			document.querySelector('.description').innerHTML=user_data.Description;
-			document.querySelector('.imdb').innerHTML=("IMDB: ")+user_data.imdbRating;
+			document.querySelector('.director').innerHTML=director+user_data.Director;
+			document.querySelector('.starring').innerHTML=starring+user_data.Actors;
+			document.querySelector('.genre').innerHTML=genre+user_data.Genre;
+			document.querySelector('.description').innerHTML=plot+user_data.Plot;
+			document.querySelector('.imdb').innerHTML=imdb+user_data.imdbRating;
 			document.querySelector('.votes').innerHTML=user_data.imdbVotes;
 			document.querySelector('.container-2-box2')
 
 	}
   }
 }
+
+/*let Containerr = document.querySelector('.weatherContainer');
+	let weatherContainerHeight= Containerr.clientHeight;
+	let weatherContainerWidth= Containerr.clientWidth;
+	Containerr.style.left= `calc(50% - ${weatherContainerWidth/2}px)`;
+	Containerr.style.top= `calc(50% - ${weatherContainerHeight/2}px)`;
+	Containerr.style.visibility='visible';
+*/
 /*
 function show_results(){
 
