@@ -12,33 +12,65 @@ function update(){
 	httpRequest.send();
 
    //parameter names
-   let director="Director: ";
+   var parameters={
+   	 director:"Director: ",
+  	 runtime:"Runtime: ",
+  	 starring:"Starring: ",
+  	 plot:"Plot: ",
+  	 imdb:"Imdb: ",
+  	 genre:"Genre: ",
+  	 writer:"Writer: ",
+   };
+
+   /*let director="Director: ";
+
    let runtime="Runtime: ";
-   let sterring="Starring: ";
+   let starring="Starring: ";
    let plot="Plot: ";
-   let imdn="Imdb: ";
+   let imdb="Imdb: ";
    let genre="Genre: ";
+   let writer="Writer: ";
+   */
+
+  
+
 	httpRequest.onreadystatechange= function(){
 		if(this.readyState==4 && this.status==200){
 			user_data=JSON.parse(this.responseText);
 			console.log(user_data);
-			document.getElementById("output").innerHTML=user_data.Title;
-			document.querySelector('.year').innerHTML=user_data.Year;
-			document.querySelector('.rating').innerHTML=user_data.Rated;
-			document.querySelector('.timing').innerHTML=user_data.Runtime;
-			document.querySelector('.poster').src=user_data.Poster;
-			document.querySelector('.director').innerHTML=director+user_data.Director;
-			document.querySelector('.starring').innerHTML=starring+user_data.Actors;
-			document.querySelector('.genre').innerHTML=genre+user_data.Genre;
-			document.querySelector('.description').innerHTML=plot+user_data.Plot;
-			document.querySelector('.imdb').innerHTML=imdb+user_data.imdbRating;
-			document.querySelector('.votes').innerHTML=user_data.imdbVotes;
-			document.querySelector('.container-2-box2')
+			document.getElementById("output").innerHTML=user_data.Title+(" (")+user_data.Year+(")");
+			//document.querySelector('.year').innerHTML=user_data.Year;
 
+			document.querySelector('.rating').innerHTML=user_data.Rated+(" | ");
+			document.querySelector('.timing').innerHTML=parameters.runtime+user_data.Runtime+(" | ");
+			document.querySelector('.genre').innerHTML=parameters.genre+user_data.Genre;
+           
+           document.querySelector('.container-2-box2').style.fontFamily="Times New Roman, Times, serif";
+           document.querySelector('.container-2-box2 div').style.padding="10px";
+
+			document.querySelector('.poster').src=user_data.Poster;
+
+			document.querySelector('.director').innerHTML=parameters.director+user_data.Director;
+			document.querySelector('.starring').innerHTML=parameters.starring+user_data.Actors;
+			
+			document.querySelector('.description').innerHTML=parameters.plot+user_data.Plot;
+			document.querySelector('.writer').innerHTML=parameters.writer+user_data.Writer;
+			document.querySelector('.imdb').innerHTML=parameters.imdb+user_data.imdbRating;
+			//document.querySelector('.rotten').innerHTML=parameters.rotten+user_data.RottenTomatoes;
+			//document.querySelector('.').innerHTML=parameters.
+			document.querySelector('.votes').innerHTML=user_data.imdbVotes;
+			//document.querySelector('.container-2-box2');
+
+			movieInfo();
 	}
   }
 }
 
+function movieInfo() {
+	let para = document.querySelector('.container-2-box2');
+	para.style.visibility='visible';
+}
+ 
 /*let Containerr = document.querySelector('.weatherContainer');
 	let weatherContainerHeight= Containerr.clientHeight;
 	let weatherContainerWidth= Containerr.clientWidth;
