@@ -123,6 +123,14 @@ visibility: hidden;
 }
 
 
+@media (max-width: 400px)
+{
+	body{
+		height: 100vh;
+	}
+}
+
+
 .stars-outer {
   display: inline-block;
   position: relative;
