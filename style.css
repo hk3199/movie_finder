@@ -1,6 +1,6 @@
 body {
   font-family: 'Lora', serif;
-  background: repeating-linear-gradient(45deg,rgba(0,0,0,0.9), rgba(16, 14, 72,0.9)),url("https://cdn.wallpapersafari.com/78/57/pMZ1hN.jpeg")center/cover;
+  background: linear-gradient(45deg,rgba(0,0,0,0.9), rgba(16, 14, 72,0.9)),url("https://cdn.wallpapersafari.com/78/57/pMZ1hN.jpeg")center/cover;
 height: 100vh;
 
 }
@@ -99,10 +99,6 @@ visibility: hidden;
 }
 
 
-@media (max-width: 750px) {
-  body{
-  	height: auto;
-  }
 
 	  .container-2{
   flex-direction: column;
@@ -122,11 +118,14 @@ visibility: hidden;
 	}	
 }
 
+}
 
-@media (max-width: 400px)
+
+
+@media (max-width: 300px)
 {
 	body{
-		height: 100vh;
+		height: auto;
 	}
 }
 
